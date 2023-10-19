@@ -44,4 +44,4 @@ When considering how to refine or modify the heuristic:
 
 ## Conclusion
 
-Understanding the nuances of different algorithms and their application to the set covering problem provides valuable insights into combinatorial optimization. The exploration of A* and its heuristic opens doors to fine-tuning solutions based on specific requirements. Happy coding!
+Understanding the nuances of different algorithms and their application to the set covering problem provides valuable insights into combinatorial optimization. The exploration of A* and its heuristic opens doors to fine-tuning solutions based on specific requirements.
