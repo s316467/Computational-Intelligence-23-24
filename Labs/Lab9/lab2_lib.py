@@ -1,6 +1,3 @@
-# Copyright **`(c)`** 2023 Antonio Ferrigno `<s316467@polito.it>`  
-# [`https://github.com/s316467/Computational-Intelligence-23-24/tree/main`](https://github.com/s316467/Computational-Intelligence-23-24/tree/main)  
-# Free for personal or classroom use; see [`LICENSE.md`](https://github.com/s316467/Computational-Intelligence-23-24/tree/main/LICENSE.md) for details.  
 
 from abc import abstractmethod
 
