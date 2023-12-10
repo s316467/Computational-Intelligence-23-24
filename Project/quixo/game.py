@@ -3,6 +3,8 @@ from copy import deepcopy
 from enum import Enum
 import numpy as np
 
+# Game rules: https://www.ultraboardgames.com/quixo/game-rules.php
+
 # Enum class for representing possible moves in the game.
 class Move(Enum):
     TOP = 0    # Move to the top
