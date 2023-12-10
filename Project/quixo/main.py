@@ -11,7 +11,7 @@ class RandomPlayer(Player):
         return from_pos, move
 
 
-class MyPlayer(Player):
+class MyPlayer(Player): # Replace this with your player implementation, for now it just makes random moves.
     def __init__(self) -> None:
         super().__init__()
 
