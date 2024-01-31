@@ -1,6 +1,6 @@
 from game import Game
-from geneticPlayer import GeneticPlayer
-from randomPlayer import RandomPlayer
+from players.geneticPlayer import GeneticPlayer
+from players.randomPlayer import RandomPlayer
 from itertools import product
 
 # Tournament between GeneticPlayer and RandomPlayer made in order to

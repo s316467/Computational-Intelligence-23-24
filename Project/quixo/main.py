@@ -1,13 +1,11 @@
-import random
-from game import Game, Move, Player
-from simulatedgame import SimulatedGame
-from minMaxPlayer import MinMaxPlayer
-from geneticPlayer import GeneticPlayer
-from randomPlayer import RandomPlayer
-from optimalPlayer import OptimalPlayer
-from reinforcedPlayer import ReinforcedPlayer
-from genetic_tournament import run_genetic_tournament
-from final_tournament import run_final_tournament
+from game import Game, Player
+from players.minMaxPlayer import MinMaxPlayer
+from players.geneticPlayer import GeneticPlayer
+from players.randomPlayer import RandomPlayer
+from players.optimalPlayer import OptimalPlayer
+from players.reinforcedPlayer import ReinforcedPlayer
+from tournament.genetic_tournament import run_genetic_tournament
+from tournament.final_tournament import run_final_tournament
 
 # Define a dictionary of players so that it can be selected in this part of the code as global variable
 # Player type selection
@@ -36,7 +34,6 @@ if __name__ == '__main__':
     # run_genetic_tournament()
     
     # run_final_tournament()
-
     
     # Create a new game instance and print the initial board
     game = Game()

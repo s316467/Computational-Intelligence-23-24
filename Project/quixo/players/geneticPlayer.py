@@ -4,7 +4,7 @@ from simulatedgame import SimulatedGame
 import random
 from game import Game, Move, Player
 import numpy as np
-from randomPlayer import RandomPlayer
+from players.randomPlayer import RandomPlayer
 from tqdm import tqdm  # Import tqdm
 
 # The GeneticPlayer is a player in a game that evolves its strategy using a genetic algorithm. 

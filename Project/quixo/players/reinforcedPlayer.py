@@ -2,7 +2,7 @@ import random
 import numpy as np
 from game import Game, Move, Player
 from simulatedgame import SimulatedGame
-from randomPlayer import RandomPlayer
+from players.randomPlayer import RandomPlayer
 
 """
 The ReinforcedPlayer class, inheriting from Player, is an AI agent designed for a board game environment. 

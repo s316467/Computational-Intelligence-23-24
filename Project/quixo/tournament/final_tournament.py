@@ -1,10 +1,10 @@
 # Import necessary classes from other modules
-from game import Game, Move
-from randomPlayer import RandomPlayer
-from minMaxPlayer import MinMaxPlayer
-from geneticPlayer import GeneticPlayer
-from reinforcedPlayer import ReinforcedPlayer
-from optimalPlayer import OptimalPlayer
+from game import Game
+from players.randomPlayer import RandomPlayer
+from players.minMaxPlayer import MinMaxPlayer
+from players.geneticPlayer import GeneticPlayer
+from players.reinforcedPlayer import ReinforcedPlayer
+from players.optimalPlayer import OptimalPlayer
 
 """
 This code comprises a function run_final_tournament() that orchestrates a tournament 
@@ -38,28 +38,25 @@ def run_final_tournament():
     num_games_per_matchup = 10
 
     # Loop through each player as player1
-    for player1 in players:
-        # Loop through each player as player2
-        for player2 in players:
-            print( f"\nPlayer1: {player1} vs Player2: {player2}")
+    for player in players:
             # Create a RandomPlayer instance
             random_player = RandomPlayer()
-            # Play the specified number of games with player1 as player1 and random player as player2
+            # Play the specified number of games with player and random player
             for _ in range(num_games_per_matchup):
                 game1 = Game()
-                winner1 = game1.play(player1, random_player)
-                tournament_stats[player1]["total_games"] += 1
-                tournament_stats[player1]["wins_as_player1"] += 1 if winner1 == 0 else 0
+                winner1 = game1.play(player, random_player)
+                tournament_stats[player]["total_games"] += 1
+                tournament_stats[player]["wins_as_player1"] += 1 if winner1 == 0 else 0
                 if winner1 == 0:
-                    tournament_stats[player1]["total_wins"] += 1
+                    tournament_stats[player]["total_wins"] += 1
 
-                # Play the specified number of games with random player as player1 and player1 as player2
+                # Play the specified number of games with random player starting as first player
                 game2 = Game()
-                winner2 = game2.play(random_player, player1)
-                tournament_stats[player1]["total_games"] += 1
-                tournament_stats[player1]["wins_as_player2"] += 1 if winner2 == 1 else 0
+                winner2 = game2.play(random_player, player)
+                tournament_stats[player]["total_games"] += 1
+                tournament_stats[player]["wins_as_player2"] += 1 if winner2 == 1 else 0
                 if winner2 == 1:
-                    tournament_stats[player1]["total_wins"] += 1
+                    tournament_stats[player]["total_wins"] += 1
 
     # Print the statistics of the tournament
     print("\nTournament Statistics:")
